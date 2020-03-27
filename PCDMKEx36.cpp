@@ -13,7 +13,7 @@ int main()
   {
     if(a == 0)
     {
-      a = stoi(token);
+      a = stoi(token);//stoi is used to convert a string to int
     }
     else if (b == 0)
     {
