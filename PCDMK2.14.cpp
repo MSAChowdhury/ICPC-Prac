@@ -10,6 +10,6 @@ int main()
     a = b;
     b = c;
   }
-  cout << n << "th Fibonacci : \n" << b;
+  cout << n << "th Fibonacci: \n" << b;
   return 0;
 }

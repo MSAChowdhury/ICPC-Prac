@@ -1,0 +1,68 @@
+#include<stdio.h>
+int a[100],b,i,j,max,min;
+main()
+{ int k;
+  printf("Enter how many number you want to input into the array");
+  scanf("%d",&b);
+  i=0;
+  j=b-1;
+
+  printf("Enter %d numbers for array",b);
+  for(k=0;k<b;k++)
+  {
+      scanf("%d",&a[k]);
+  }
+
+    max_min(i,j,max,min);
+printf("max=%d min=%d",max,min);
+
+}
+
+int max_min(int i,int j,int max, int min)
+{
+    int mid,max1,min1;
+
+
+    printf("i=%d j=%d a[i]=%d a[j]=%d \n",i,j,a[i],a[j]);
+    if(i==j)
+    {
+        max=a[i];
+        min=a[i];
+
+    }
+    else if(i==j-1)
+    {
+        if(a[i]<a[j])
+        {
+            max=a[j];
+            min=a[i];
+        }
+        else
+        {
+            max=a[i];
+            min=a[j];
+        }
+
+    }
+    else
+    {
+        mid=(i+j)/2;
+        printf("%d",mid);
+        max_min(i,mid,max,min);
+        max1=max;
+        min1=min;
+        printf("max1=%d min1=%d",max1,min1);
+        max_min(mid+1,j,max,min);
+        printf("max2=%d min2=%d",max,min);
+        if(max<max1)
+        {
+        max=max1;
+        }
+        if(min>min1)
+        {
+        min=min1;
+        }
+
+}
+   return max,min;
+}

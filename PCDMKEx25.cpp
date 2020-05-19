@@ -5,8 +5,8 @@ int conversion(int intergral,float fractional)
 {
   int remainder, binaryInt = 0,i = 0,j,binaryTotal, n;
   int fractor[20];
-  cout << "Enter how many precision after decimal point:\n";
-  cin>>n;
+  /*cout << "Enter how many precision after decimal point:\n";
+  cin>>n;*/
 
 
   while (intergral != 0)

@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
-int solution(int n)
+int solution(long int n)
 {
-  int num[20], case1 = 0;
+  long int num[1000], case1 = 0;
   for (size_t j = 0; j < n; j++)
   {
     cin >> num[j];
-    if(num[j] > 99) //Taking two integers, if found three place integers, it will make it 0
+    if(num[j] > 99 || num[j] < 0) //Taking two integers, if found three place integers, it will make it 0
     {
       num[j] = 0;
     }
@@ -16,15 +16,14 @@ int solution(int n)
 }
 int main()
 {
-  int t,n,sln;
+  long int t,n,sln;
   cin >> t;
-  cout << endl;
 
-  for (size_t i = 0; i < t; i++)
+  for (size_t i = 1; i <= t; i++)
   {
     cin >> n;
     sln = solution(n); // calling the function again and again
-    cout <<sln<<endl;
+    cout <<"Case "<<i<<": "<< sln <<endl;
   }
 
   return 0;
